@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+
+  <script src="./js/main.js" defer></script>
+
+  <title>Travelulu</title>
+</head>
+
+<body id="top">
+  <div class="wrapper">
+    <header>
+      <a href="#" class="logo">Travelulu</a>
+      <nav>
+        <ul class="menu">
+          <li class="menu__item"><a href="#top">Home</a></li>
+          <li class="menu__item">
+            <svg class="menu__arrow" width="17" height="10" viewBox="0 0 17 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect x="16.0293" y="1.37756" width="10.8204" height="1.54577" rx="0.772885"
+                transform="rotate(135 16.0293 1.37756)" />
+              <rect width="10.8204" height="1.54577" rx="0.772885"
+                transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 9.45996 7.93616)" />
+            </svg>
+            <a href="#services" class="toggle">Services</a>
+            <ul class="menu__item-sublist toggleMe">
+              <li class="menu__item-subitem"><a href="#planning">Planning</a></li>
+              <li class="menu__item-subitem"><a href="#financing">Financing</a></li>
+              <li class="menu__item-subitem"><a href="#contact">Purchasing</a></li>
+              <li class="menu__item-subitem"><a href="#reviewing">Reviewing</a></li>
+              <li class="menu__item-subitem"><a href="#flying">Flying</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <svg class="menu__arrow" width="17" height="10" viewBox="0 0 17 10" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect x="16.0293" y="1.37756" width="10.8204" height="1.54577" rx="0.772885"
+                transform="rotate(135 16.0293 1.37756)" />
+              <rect width="10.8204" height="1.54577" rx="0.772885"
+                transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 9.45996 7.93616)" />
+            </svg>
+            <a href="#" class="toggle">Continents</a>
+            <ul class="menu__item-sublist toggleMe">
+              <li class="menu__item-subitem"><a href="#reviewing">North America</a></li>
+              <li class="menu__item-subitem"><a href="#reviewing">South America</a></li>
+              <li class="menu__item-subitem"><a href="#reviewing">Asia</a></li>
+              <li class="menu__item-subitem"><a href="#reviewing">Africa</a></li>
+              <li class="menu__item-subitem"><a href="#reviewing">Europe</a></li>
+              <li class="menu__item-subitem"><a href="#reviewing">Australia</a></li>
+            </ul>
+          </li>
+          <li class="menu__item"><a href="#contact">Contact</a></li>
+          <li class="menu__item"><a href="#privacy">Privacy</a></li>
+        </ul>
+      </nav>
+      <button class="burger">
+        <span class="burger__menu"></span>
+      </button>
+    </header>
+    <main>
+      <section class="hero">
+        <h1 class="hero__text">Plan your next big trip overseas.</h1>
+        <picture>
+          <source media="(max-width: 480px)" srcset="./images/hero/BoardingM.png">
+          <source media="(max-width: 800px)" srcset="./images/hero/Boarding.png">
+          <source media="(max-width: 1000px)" srcset="./images/hero/BoardingM.png">
+          <img src="./images/hero/Boarding.png" class="hero__img">
+        </picture>
+        <div class="hero__buttons">
+          <button class="hero__button">BEGIN PLANS</button>
+          <button class="hero__button">REVIEW PLANS</button>
+        </div>
+      </section>
+      <section class="herolist">
+        <ul class="herolist__list">
+          <li class="herolist__item">
+            <div class="herolist__item-container">
+              <div class="herolist__num" data-val="23900"></div>
+              <div class="herolist__text">Travel to over 23 thousand locations around the world.</div>
+            </div>
+          </li>
+          <li class="herolist__item">
+            <div class="herolist__item-container">
+              <div class="herolist__num" data-val="82000"></div>
+              <div class="herolist__text">Read tens of thousands of reviews of destinations.</div>
+            </div>
+          </li>
+          <li class="herolist__item">
+            <div class="herolist__item-container">
+              <div class="herolist__num" data-val="4000000"></div>
+              <div class="herolist__text">Visited by millions of travellers every single day.</div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="toollist" id="financing">
+        <div class="container">
+          <h6 class="_anim-items">TOOL LIST</h6>
+          <div class="toollist__text">
+            <h2 class="_anim-items">Use our assortment of travel plan tools</h2>
+            <p class="_anim-items">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar lorem
+              justo, Lorem ipsum
+              dolor sit amet, consectetur</p>
+          </div>
+          <div class="toollist__cards _anim-items">
+            <div class="toollist__card">
+              <img src="./images/toollist/time.png">
+              <h5>Plan Trip Dates</h5>
+              <p>orem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <button class="toollist__button">LEARN MORE</button>
+            </div>
+            <div class="toollist__card">
+              <img src="./images/toollist/Plane and Money.png">
+              <h5>Pay For Your Flights</h5>
+              <p>orem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <button class="toollist__button">LEARN MORE</button>
+            </div>
+            <div class="toollist__card">
+              <img src="./images/toollist/Money.png">
+              <h5>Plan Your Finances</h5>
+              <p>orem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <button class="toollist__button">LEARN MORE</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="photogallery" id="reviewing">
+        <div class="container">
+          <h6 class="_anim-items">PHOTO GALLERY</h6>
+          <div class="photogallery__text">
+            <h2 class="_anim-items">View the wonderful places you can visit</h2>
+            <p class="_anim-items">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar lorem
+              justo, Lorem ipsum
+              dolor sit amet,
+              consectetur</p>
+          </div>
+        </div>
+        <div class="photogallery__slider">
+          <div class="photogallery__slides"><img src="./images/photogallery/beach.png" draggable="false"></div>
+          <div class="photogallery__slides"><img src="./images/photogallery/house.png" draggable="false"></div>
+          <div class="photogallery__slides"><img src="./images/photogallery/mounting.png" draggable="false"></div>
+          <div class="photogallery__slides"><img src="./images/photogallery/tent.png" draggable="false"></div>
+          <div class="photogallery__slides"><img src="./images/photogallery/sea.png" draggable="false"></div>
+          <div class="photogallery__slides"><img src="./images/photogallery/venice.png" draggable="false"></div>
+        </div>
+      </section>
+      <section class="planahead" id="planning">
+        <h6 class="_anim-items">PLANNING AHEAD</h6>
+        <h2 class="_anim-items">Let’s review your checklist of everything</h2>
+        <div class="airhelp">
+          <div class="airhelp-leftitem _anim-items">
+            <p>Lorem ipsum dolor sit amet, consectetur ds.</p>
+            <div class="leftitem-forward">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5L15.9632 11.9632L9 18.9263" stroke="#5F2EEA" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="airhelp-leftitem _anim-items">
+            <p>Lorem ipsum dolor sit amet, consectetur ds.</p>
+            <div class="leftitem-forward">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5L15.9632 11.9632L9 18.9263" stroke="#5F2EEA" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="airhelp-leftitem _anim-items">
+            <p>Lorem ipsum dolor sit amet, consectetur ds.</p>
+            <div class="leftitem-forward">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 5L15.9632 11.9632L9 18.9263" stroke="#5F2EEA" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <div class="airhelp-rightitem _anim-items">
+            <div class="rightitem-forward">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 5L8.03683 11.9632L15 18.9263" stroke="#5F2EEA" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur ds.</p>
+          </div>
+          <div class="airhelp-rightitem _anim-items">
+            <div class="rightitem-forward">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 5L8.03683 11.9632L15 18.9263" stroke="#5F2EEA" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur ds.</p>
+          </div>
+          <div class="airhelp-rightitem _anim-items">
+            <div class="rightitem-forward">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 5L8.03683 11.9632L15 18.9263" stroke="#5F2EEA" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur ds.</p>
+          </div>
+          <img src="./images/Planning Ahead/AirHelp.png">
+        </div>
+      </section>
+      <section class="testimonials" id="flying">
+        <div class="container">
+          <h6 class="_anim-items">TESTIMONIALS</h6>
+          <h2 class="_anim-items">Let’s see what fans of Travelulu have to say</h2>
+          <span id="left" class="arrow-left">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.2461 7.83105L12.2083 17.8689L22.2461 27.9067" stroke="#FCFCFC" stroke-width="2.88311"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span id="right" class="arrow-right">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.2461 7.83105L12.2083 17.8689L22.2461 27.9067" stroke="#FCFCFC" stroke-width="2.88311"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <div class="testimonials__container">
+            <div class="container__card">
+              <div class="card__icon">
+                <img class="card__img1" src="./icons/Avatar face 1.svg" draggable="false">
+              </div>
+              <div class="card__top">
+                <p>Joe Blo</p>
+                <p>Visited: France</p>
+              </div>
+              <div class="card__bottom">
+                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar lorem justo, id
+                  faucibus
+                  mi.</q>
+              </div>
+            </div>
+            <div class="container__card">
+              <div class="card__icon">
+                <img class="card__img2" src="./icons/Avatar face 2.svg" draggable="false">
+              </div>
+              <div class="card__top">
+                <p>Jane Blo</p>
+                <p>Visited: France</p>
+              </div>
+              <div class="card__bottom">
+                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar lorem justo, id
+                  faucibus
+                  mi.</q>
+              </div>
+            </div>
+            <div class="container__card">
+              <div class="card__icon">
+                <img class="card__img3" src="./icons/Avatar face 3.svg" draggable="false">
+              </div>
+              <div class="card__top">
+                <p>Joe Blo</p>
+                <p>Visited: France</p>
+              </div>
+              <div class="card__bottom">
+                <q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pulvinar lorem justo, id
+                  faucibus
+                  mi.</q>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contactbox" id="contact">
+        <h2>Need more information to get started?</h2>
+        <button class="contact__button">CONTACT US</button>
+      </section>
+    </main>
+    <footer id="privacy">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__info">
+            <a href="#" class="footer__logo">Travelulu</a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ullamcorper magna, ac laoreet ex. Integer
+              a consequat lectus. Nullam tortor sem</p>
+            <p>@ Copyright 2021, All Rights Reserved.</p>
+          </div>
+          <div class="footer__services">
+            <h6>Services</h6>
+            <ul>
+              <li><a href="#">Planning</a></li>
+              <li><a href="#">Financing</a></li>
+              <li><a href="#">Purchasing</a></li>
+              <li><a href="#">Reviewing</a></li>
+              <li><a href="#">Flying</a></li>
+            </ul>
+          </div>
+          <div class="footer__continents">
+            <h6>Continents</h6>
+            <ul>
+              <li><a href="#">North America</a></li>
+              <li><a href="#">South America</a></li>
+              <li><a href="#">Asia</a></li><br>
+              <li><a href="#">Africa</a></li><br>
+              <li><a href="#">Europe</a></li>
+              <li><a href="#">Australia</a></li>
+            </ul>
+          </div>
+          <div class="footer__contact">
+            <h6>Contact</h6>
+            <a href="mailto:travelulu@website.com">travelulu@website.com</a>
+            <address>
+              22 Street Address,<br>
+              Suburb Address<br>
+              Main City, PO Box<br>
+              Country<br>
+            </address>
+            <a href="tel:08 8888 88888">08 8888 88888</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
