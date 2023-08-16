@@ -101,7 +101,7 @@
           </li>
         </ul>
       </section>
-      <section class="toollist" id="financing">
+      <section class="toollist financing">
         <div class="container">
           <h6 class="_anim-items">TOOL LIST</h6>
           <div class="toollist__text">
@@ -132,7 +132,7 @@
           </div>
         </div>
       </section>
-      <section class="photogallery" id="reviewing">
+      <section class="photogallery reviewing">
         <div class="container">
           <h6 class="_anim-items">PHOTO GALLERY</h6>
           <div class="photogallery__text">
@@ -152,7 +152,7 @@
           <div class="photogallery__slides"><img src="./images/photogallery/venice.png" draggable="false"></div>
         </div>
       </section>
-      <section class="planahead" id="planning">
+      <section class="planahead planning">
         <h6 class="_anim-items">PLANNING AHEAD</h6>
         <h2 class="_anim-items">Let’s review your checklist of everything</h2>
         <div class="airhelp">
@@ -213,7 +213,7 @@
           <img src="./images/Planning Ahead/AirHelp.png">
         </div>
       </section>
-      <section class="testimonials" id="flying">
+      <section class="testimonials flying">
         <div class="container">
           <h6 class="_anim-items">TESTIMONIALS</h6>
           <h2 class="_anim-items">Let’s see what fans of Travelulu have to say</h2>
@@ -275,12 +275,45 @@
           </div>
         </div>
       </section>
-      <section class="contactbox" id="contact">
-        <h2>Need more information to get started?</h2>
+      <section class="contactbox contact">
+        <h2 class="contactbox__header">Need more information to get started?</h2>
         <button class="contact__button">CONTACT US</button>
+        <h2 class="contactform__header">Contact form</h2>
+        <form class="contactform" id="form" action="/action_page.php">
+          <div class="contactform__blocks">
+            <label for="fname" class="contactform__label">First Name*</label>
+            <input type="text" class="contactform__input" id="fname" name="fname" placeholder="Your first name..."
+              required>
+          </div>
+
+          <div class="contactform__blocks">
+            <label for="lname" class="contactform__label">Last Name*</label>
+            <input type="text" class="contactform__input" id="lname" name="lname" placeholder="Your last name..."
+              required>
+          </div>
+
+          <div class="contactform__blocks">
+            <label for="email" class="contactform__label">Email*</label>
+            <input type="email" class="contactform__input" id="email" name="email" placeholder="example@yourmail.com"
+              required>
+          </div>
+
+          <div class="contactform__blocks">
+            <label for="subject" class="contactform__label">Subject*</label>
+            <input type="text" class="contactform__input" id="subject" name="subject" placeholder="How can we help?"
+              required>
+          </div>
+
+          <div class="contactform__blocks">
+            <label for="message" class="contactform__label">Message*</label>
+            <textarea type="text" class="contactform__input" id="message" name="message"
+              placeholder="Type your message here" required></textarea>
+          </div>
+        </form>
+        <button type="button" class="contactform__button" type="submit" form="form">SEND MESSAGE</button>
       </section>
     </main>
-    <footer id="privacy">
+    <footer class="privacy">
       <div class="container">
         <div class="footer__content">
           <div class="footer__info">

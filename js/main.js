@@ -73,8 +73,8 @@ const header = document.querySelector('header');
 const logo = document.querySelector('.logo');
 const open = document.querySelector('.burger');
 
-const arrow = document.querySelector('.menu__arrow');
-const menuitem = document.querySelector('.menu__item-sublist');
+const arrow = document.querySelectorAll('.menu__arrow');
+const menuitem = document.querySelectorAll('.menu__item-sublist');
 
 const navitems = document.querySelectorAll('.menu__item a');
 
@@ -119,12 +119,16 @@ if (navigation.classList.contains('nav__open')) {
  navigation.classList.remove('nav__open');
 }
 
-if (arrow.classList.contains('arrow__open')) {
- arrow.classList.remove('arrow__open');
+for (let i = 0; i < arrow.length; i++) {
+  if (arrow[i].classList.contains('arrow__open')) {
+    arrow[i].classList.remove('arrow__open');
+  }
 }
 
-if (menuitem.classList.contains('active')) {
- menuitem.classList.remove('active');
+for(let i = 0; i < menuitem.length; i++) {
+  if (menuitem[i].classList.contains('active')) {
+    menuitem[i].classList.remove('active');
+  }
 }
 }
 
@@ -170,12 +174,16 @@ if (navigation.classList.contains('nav__open')) {
  navigation.classList.remove('nav__open');
 }
 
-if (arrow.classList.contains('arrow__open')) {
- navigation.classList.remove('arrow__open');
+for(let i = 0; i < arrow.length; i++) {
+  if (arrow[i].classList.contains('arrow__open')) {
+ arrow[i].classList.remove('arrow__open');
+}
 }
 
-if (menuitem.classList.contains('active')) {
- navigation.classList.remove('active');
+for(let i = 0; i < menuitem.length; i++) {
+  if (menuitem[i].classList.contains('active')) {
+    menuitem[i].classList.remove('active');
+  }
 }
 }
 
@@ -201,7 +209,7 @@ if (open.classList.contains('burger__open')) {
 
 //Header Scroll
 window.addEventListener('scroll', () => {
-  console.log(window.scrollY);
+  
   if(window.scrollY > 0) {
     document.querySelector('header').classList.add('header__scroll');
     document.querySelector('.burger').classList.add('burger__scroll');
@@ -343,6 +351,26 @@ const nav = document.querySelector('nav');
   });
 
   // Animation on Scroll
+  const herolist = document.querySelectorAll('.herolist__item');
+  window.addEventListener('load', () => {
+    if (window.matchMedia("(max-width: 800px)").matches && window.matchMedia("(max-height: 1000px)").matches) {
+    for (let i = 0; i < herolist.length; i++) {
+      if (herolist[i].classList.contains('_active')) {
+        herolist[i].classList.remove('_active');
+        herolist[i].classList.add('_anim-items');
+      }
+    }
+    } else {
+      if (window.matchMedia("(max-width: 1000px)").matches && window.matchMedia("(max-height: 1000px)").matches) {
+        for (let i = 0; i < herolist.length; i++) {
+          if (herolist[i].classList.contains('_anim-items')) {
+            herolist[i].classList.remove('_anim-items');
+            herolist[i].classList.add('_active');
+          }
+        }
+      }
+    }  
+  });
 
   let animItems = document.querySelectorAll('._anim-items');
 
@@ -513,3 +541,97 @@ const nav = document.querySelector('nav');
   carousel.addEventListener('mousemove', drag);
   document.addEventListener('mouseup', draggingStop);
   carousel.addEventListener('scroll', infiniteScrolling);
+
+  // Contact Form (Action)
+
+  const contactbox = document.querySelector('.contactbox');
+  const contactboxheader = document.querySelector('.contactbox h2:first-child');
+  const contactboxbutton = document.querySelector('.contact__button');
+
+  const contactformheader = document.querySelector('.contactform__header');
+  const contactform = document.querySelector('.contactform');
+  const contactformbutton = document.querySelector('.contactform__button');
+
+  contactboxbutton.addEventListener('click', () => {
+    if (!contactbox.classList.contains('contactbox__form') === true) {
+      contactbox.classList.add('contactbox__form');
+    }
+
+    if (!contactboxheader.classList.contains('contactbox__header-form') === true) {
+      contactboxheader.classList.add('contactbox__header-form');
+    }
+
+    if (!contactboxbutton.classList.contains('contact__button-form') === true) {
+      contactboxbutton.classList.add('contact__button-form');
+    }
+
+    if (!contactform.classList.contains('form-active') === true) {
+      contactform.classList.add('form-active');
+    }
+
+    if (!contactformheader.classList.contains('form-active') === true) {
+      contactformheader.classList.add('form-active');
+    }
+
+    if (!contactformbutton.classList.contains('form-active-button') === true) {
+      contactformbutton.classList.add('form-active-button');
+    }
+  })
+
+// Scroll to sections
+
+//document.getElementById();
+
+// const scrollToBody = document.querySelector('body');
+// const rect = scrollToBody.getBoundingClientRect();
+// const calc = rect.top.toFixed()
+//    console.log(calc-(calc));
+//    console.log(window.scrollY);
+//    console.log(scrollToBody);
+
+const _planning = document.querySelector('a[href="#planning"]');
+const _financing = document.querySelector('a[href="#financing"]');
+const _flying = document.querySelector('a[href="#flying"]');
+const _privacy = document.querySelector('a[href="#privacy"]');
+
+const _contact = document.querySelectorAll('a[href="#contact"]');
+const _reviewing = document.querySelectorAll('a[href="#reviewing"]');
+
+const headerHeight = document.querySelector('header').getBoundingClientRect().height.toFixed();
+
+_planning.addEventListener('click', scrollFunction);
+_financing.addEventListener('click', scrollFunction);
+_flying.addEventListener('click', scrollFunction);
+_privacy.addEventListener('click', scrollFunction);
+
+for(let i = 0; i < _contact.length; i++) {
+  _contact[i].addEventListener('click', scrollFunction);
+}
+
+for(let i = 0; i < _reviewing.length; i++) {
+  _reviewing[i].addEventListener('click', scrollFunction);
+}
+
+
+function scrollFunction() {
+  const text1 = this.getAttribute('href');
+  const text2 = "." + text1.slice(1);
+  const element = document.querySelector(text2);
+  const rectTop = element.getBoundingClientRect().top.toFixed();
+  const rectHeight = element.getBoundingClientRect().height.toFixed();
+  let calc;
+  if (rectTop>=0) {
+    calc = scrollY + (rectTop - headerHeight);
+  } else {
+    calc = scrollY + (rectTop - headerHeight);
+  }
+  window.scrollTo(0,calc.toFixed());
+  
+}
+
+
+
+
+
+
+

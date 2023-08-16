@@ -2,6 +2,7 @@ html, body {
  font-family: Poppins, sans-serif;
  color: #000000;
  scroll-behavior: smooth;
+ -webkit-tap-highlight-color: transparent;
 }
 
 .wrapper {
@@ -25,10 +26,9 @@ main {
 header {
  position: fixed;
  width: 100%;
- max-width: 1237px;
+ max-width: 1440px;
  background: rgba(255, 255, 255, 0.9);
  z-index: 2;
-
 
  padding: 34px 4.72% 33px 9.38%;
  display: flex;
@@ -42,6 +42,7 @@ header {
 
 .header__scroll {
  padding: 0px 4.72% 0px 9.38%;
+ border-bottom: none;
 }
 
 .logo {
@@ -154,14 +155,10 @@ nav {
  background: transparent;
  position: absolute;
  margin-right: 14px;
- top: 55px;
- /* 40px */
  right: 5.69%;
  display: none;
  width: 28px;
- /* 50px */
  height: 18px;
- /* 50px */
  z-index: 2;
 
  /* background: hsla(256, 82%, 55%, 0.3);
@@ -1004,6 +1001,8 @@ nav {
  align-items: center;
  justify-content: center;
  border-radius: 40px;
+
+ transition: all 0.4s ease;
 }
 
 .contactbox h2 {
@@ -1014,10 +1013,18 @@ nav {
  letter-spacing: 1px;
  color: #FFFFFF;
  text-align: center;
+}
+
+.contactbox__header {
  margin-bottom: 33px;
 }
 
-.contact__button {
+.contactform__header {
+ visibility: hidden;
+ height: 0px;
+}
+
+.contact__button, .contactform__button {
  font-weight: 600;
  font-size: 16px;
  line-height: 28px;
@@ -1033,10 +1040,207 @@ nav {
  transition: all 0.4s ease;
 }
 
-.contact__button:hover {
+
+.contactform__button {
+ visibility: hidden;
+ height: 0;
+ max-width: none;
+ padding: 0px;
+ border: 0px;
+}
+
+.contact__button:hover, .contactform__button:hover {
  background-image: linear-gradient(to top right, #5425db, #cdccff);
  scale: 1.05;
  box-shadow: 0px 0px 8px 8px rgba(252, 252, 252, 0.5);
+}
+
+.contactform {
+ visibility: hidden;
+ display: grid;
+ height: 0px;
+ grid-template-columns: auto auto;
+ row-gap: 10px;
+ justify-items: center;
+ width: 80%;
+}
+
+.contactform__blocks {
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+ width: 70%;
+}
+
+.contactform__blocks:last-child {
+ grid-column: 1 / span 2;
+ width: 85%;
+}
+
+.contactform__label {
+ font-weight: 600;
+ font-size: 16px;
+ line-height: 28px;
+ letter-spacing: 0.75px;
+ color: #FCFCFC;
+}
+
+.contactform__input {
+ padding: 20px;
+ border-radius: 40px;
+}
+
+.contactform__input::placeholder {
+ padding-left: 5px;
+ opacity: 0.7;
+}
+
+.contactform textarea {
+ resize: none;
+ border-radius: 4px;
+ height: 100px;
+}
+
+/* ContactBox Animation */
+
+.contactbox__form {
+ height: 613px;
+}
+
+.contactbox__header-form {
+ animation-name: contactheader;
+ animation-duration: 0.4s;
+ animation-timing-function: ease;
+ animation-fill-mode: forwards;
+}
+
+@keyframes contactheader {
+ 0% {
+  height: auto;
+  margin-bottom: 33px;
+  flex-basis: auto;
+  visibility: visible;
+  transform: translateY(0px);
+ }
+
+ 75% {
+  transform: translateY(-450px);
+ }
+
+ 100% {
+  height: 0px;
+  margin: 0px;
+  flex-basis: 0px;
+  visibility: hidden;
+  transform: translateY(-450px);
+ }
+}
+
+.contact__button-form {
+ animation-name: contactbutton;
+ animation-duration: 0.4s;
+ animation-timing-function: ease;
+ animation-fill-mode: forwards;
+}
+
+@keyframes contactbutton {
+ 0% {
+  height: auto;
+  border: 2px;
+  padding: 16px 66.5px;
+  flex-basis: auto;
+  visibility: visible;
+  transform: translateY(0px);
+ }
+
+ 50% {
+  transform: translateY(300px);
+ }
+
+ 100% {
+  height: 0px;
+  padding: 0px;
+  border: 0px;
+  flex-basis: 0px;
+  visibility: hidden;
+  transform: translateY(300px);
+ }
+}
+
+.form-active {
+ animation-name: contactform;
+ animation-duration: 0.4s;
+ animation-timing-function: ease;
+ animation-fill-mode: forwards;
+ animation-delay: 0.6s;
+
+}
+
+@keyframes contactform {
+ 0% {
+  height: 0px;
+  margin: 0px;
+  scale: 0;
+  visibility: hidden;
+ }
+
+ 25% {}
+
+ 50% {}
+
+ 75% {
+  height: auto;
+  margin: 20px auto;
+ }
+
+ 100% {
+  height: auto;
+  margin: 20px auto;
+  scale: 1;
+  visibility: visible;
+ }
+}
+
+.form-active-button {
+ animation-name: formbutton;
+ animation-duration: 0.4s;
+ animation-timing-function: ease;
+ animation-fill-mode: forwards;
+ animation-delay: 0.6s;
+}
+
+@keyframes formbutton {
+ 0% {
+  height: 0px;
+  margin: 0px;
+  scale: 0;
+  visibility: hidden;
+
+  padding: 0px;
+  border: 0px;
+ }
+
+ 25% {}
+
+ 50% {}
+
+ 75% {
+  height: auto;
+  margin: 20px auto;
+
+  padding: 16px 66.5px;
+  border: 2px solid #FCFCFC;
+ }
+
+ 100% {
+  height: auto;
+  margin: 20px auto;
+  scale: 1;
+  visibility: visible;
+
+  padding: 16px 66.5px;
+  border: 2px solid #FCFCFC;
+ }
 }
 
 /* =========== Footer =========== */

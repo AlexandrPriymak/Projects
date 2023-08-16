@@ -77,6 +77,18 @@
  .contactbox {
   height: 350px;
  }
+
+ .contactbox__form {
+  height: 613px;
+ }
+
+ .contactform__blocks {
+  width: 90%;
+ }
+
+ .contactform__blocks:last-child {
+  width: 95%;
+ }
 }
 
 /* ===== 1000px ===== */
@@ -524,11 +536,17 @@
  /* ----- Header ----- */
 
  header {
-  padding-bottom: 26px;
+  padding: 26px 4.72% 26px 9.38%;
  }
 
  nav {
   border-bottom-left-radius: 0;
+ }
+
+ .menu__item-sublist {
+  height: auto;
+  gap: 15px;
+  padding: 15px 0px;
  }
 
  /* ----- Hero Section ----- */
@@ -697,8 +715,57 @@
   margin-bottom: 54px;
  }
 
+ .contactbox__form {
+  height: 645px;
+ }
+
+ .contactbox h2:nth-child(3) {
+  font-size: 32px;
+  line-height: 36px;
+ }
+
+ .contactform {
+  grid-template-columns: auto;
+  width: 90%;
+ }
+
+ .contactform__blocks {
+  width: 70%;
+ }
+
+ .contactform__blocks:last-child {
+  grid-column: 1;
+  width: 70%;
+ }
+
+ .contactform__input {
+  padding: 10px;
+ }
+
+ @keyframes contactform {
+  0% {
+   height: 0px;
+   margin: 0px;
+   scale: 0;
+   visibility: hidden;
+  }
+
+  75% {
+   height: auto;
+   margin: 10px auto;
+  }
+
+  100% {
+   height: auto;
+   margin: 10px auto;
+   scale: 1;
+   visibility: visible;
+  }
+ }
+
 }
 
+/* ===== 500px ===== */
 @media (max-width:500px) {
 
  /* ----- Hero Section ----- */
@@ -724,7 +791,16 @@
 
 }
 
+/* ===== 430px ===== */
 @media (max-width:430px) {
+
+ /* ----- Header ----- */
+
+ .menu__item-sublist {
+  height: auto;
+  gap: 10px;
+  padding: 10px 0px;
+ }
 
  /* ----- Hero Section ----- */
 
@@ -831,8 +907,21 @@
   height: 350px;
  }
 
+ .contactbox__form {
+  height: 645px;
+ }
+
+ .contactform__blocks {
+  width: 90%;
+ }
+
+ .contactform__blocks:last-child {
+  width: 90%;
+ }
+
 }
 
+/* ===== 350px ===== */
 @media (max-width:350px) {
 
  /* ----- Hero Section ----- */
@@ -895,6 +984,10 @@
 
  .contactbox {
   height: 300px;
+ }
+
+ .contactbox__form {
+  height: 645px;
  }
 
  .contactbox h2 {
